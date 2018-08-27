@@ -105,7 +105,10 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/dev/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+# LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = env('LANGUAGE_CODE',  default="en-us")
+
+LANGUAGES = env('LANGUAGES', default=('en', 'English'))
 
 TIME_ZONE = 'UTC'
 
